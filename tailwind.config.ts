@@ -13,7 +13,8 @@ const config: Config = {
       text: "#191003",
     },
     fontFamily: {
-      sans: ["Plus Jakarta Sans", "Satoshi", "sans-serif", "Inter"],
+      jakarta: ["Plus Jakarta Sans", "sans-serif"],
+      satoshi: ["Satoshi", "sans-serif"],
     },
     extend: {
       backgroundImage: {
