@@ -24,3 +24,15 @@ h6 {
 .text {
   @apply font-satoshi;
 }
+
+.custom-size {
+  width: 848px;
+  height: 566px;
+}
+
+@media screen and (max-width: 768px) {
+  .custom-size {
+    width: 585px;
+    height: 392px;
+  }
+}
