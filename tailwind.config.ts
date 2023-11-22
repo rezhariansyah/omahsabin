@@ -8,7 +8,7 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      primary: "#E48400",
+      orange: "#E48400",
       textAccent: "#7A7774",
       text: "#191003",
     },
