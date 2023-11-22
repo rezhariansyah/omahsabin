@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     colors: {
       orange: "#E48400",
+      orangeHover: "#F4920D",
       blackBlur: "#7A7774",
       almostBlack: "#191003",
       white: "#FFFFFF",
