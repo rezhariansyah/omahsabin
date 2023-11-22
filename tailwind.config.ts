@@ -11,6 +11,7 @@ const config: Config = {
       orange: "#E48400",
       blackBlur: "#7A7774",
       almostBlack: "#191003",
+      white: "#FFFFFF",
     },
     fontFamily: {
       jakarta: ["Plus Jakarta Sans", "sans-serif"],
