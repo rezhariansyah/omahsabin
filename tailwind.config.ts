@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     colors: {
       orange: "#E48400",
-      textAccent: "#7A7774",
-      text: "#191003",
+      blackBlur: "#7A7774",
+      almostBlack: "#191003",
     },
     fontFamily: {
       jakarta: ["Plus Jakarta Sans", "sans-serif"],
