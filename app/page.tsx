@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Layout from "@/components/Layout";
 
 export default function Home() {
   return (
-    <div>
+    <Layout>
       <h2 className="font-jakarta font-bold text-3xl">Relax Your Nature</h2>
-    </div>
+    </Layout>
   );
 }
