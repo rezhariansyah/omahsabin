@@ -1,0 +1,16 @@
+.titleBanner {
+  font-size: 78px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 88px;
+}
+
+.lableBanner {
+  text-align: justify;
+  font-family: "Satoshi";
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 28px;
+  color: #a3a19f;
+  margin-top: 32px;
+}

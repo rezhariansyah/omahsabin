@@ -5,7 +5,7 @@ import brandIcon from "../../public/assets/icons/brand.png";
 const WebViewNavbar = ({ children }: { children?: React.ReactNode }) => {
   return (
     <>
-      <div className="navbar p-0 bg-white sticky top-0">
+      <div className="navbar p-0 bg-white sticky top-0 z-10">
         <div className="flex-1">
           <a className="p-0 text-xl">
             <Image src={brandIcon} width={124} height={25} alt="brand-logo" />
