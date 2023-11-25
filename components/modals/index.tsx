@@ -37,7 +37,7 @@ const Modals: React.FC<ModalsProps> = ({ image, alt }) => {
       <ModalVideo
         channel="youtube"
         isOpen={isOpen}
-        videoId="L61p2uyiMSo"
+        videoId="BFS9n4B_2xA"
         onClose={() => setOpen(false)}
       />
     </>
