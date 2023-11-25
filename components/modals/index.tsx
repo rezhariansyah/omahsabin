@@ -24,7 +24,7 @@ const Modals: React.FC<ModalsProps> = ({ image, alt }) => {
           onClick={openModal}
         >
           <Image className="md:w-48 md:h-48 h-48" src={image} alt={alt} />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="absolute top-1/2 left-1/2 md:left-[45%] transform -translate-x-1/2 -translate-y-1/2">
             <FontAwesomeIcon
               icon={faCirclePlay}
               className=" text-3xl md:opacity-0 md:group-hover:opacity-80 md:transition-opacity duration-300"

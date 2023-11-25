@@ -195,13 +195,13 @@ const Content3: React.FC = () => {
   return (
     <>
       <div className="flex items-center justify-between max-h-fit	 mt-24">
-        <div className="flex gap-3">
+        <div className="flex items-center gap-3">
           <div className="w-6 h-6 bg-black/50 text-blackBlur cursor-pointer border border-blackBlur rounded-full flex items-center justify-center">
             <span onClick={prevBigSlide}>{"<-"}</span>
           </div>
           <span
             onClick={prevBigSlide}
-            className="font-satoshi cursor-pointer text-base font-light"
+            className="font-satoshi md:text-base text-sm cursor-pointer font-light"
           >
             {data[(bigBannerIndex - 1 + data.length) % data.length].name}
           </span>
@@ -209,7 +209,7 @@ const Content3: React.FC = () => {
         <div className="flex items-center gap-3">
           <span
             onClick={nextBigSlide}
-            className="text-base font-satoshi font-light cursor-pointer "
+            className="md:text-base text-sm font-satoshi font-light cursor-pointer "
           >
             {data[(bigBannerIndex + 1) % data.length].name}
           </span>
@@ -226,7 +226,7 @@ const Content3: React.FC = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <div className="flex-1 max-w-[1400px] h-[566px] w-full m-auto py-16 px-4 relative group ">
+              <div className="flex-1 max-w-[1400px] md:h-[566px] h-[392px] w-full m-auto py-16 px-4 relative group ">
                 {data[bigBannerIndex].images.map((slide, index) => (
                   <Image
                     key={index}
