@@ -54,8 +54,5 @@
     "*.{js,jsx,ts,tsx}": "eslint --fix",
     "*.{css,scss}": "stylelint --fix",
     "*.{json,md,yml}": "prettier --write"
-  },
-  "engines": {
-    "node": "14.x"
   }
 }
