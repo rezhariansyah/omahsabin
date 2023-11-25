@@ -20,7 +20,7 @@ export default function About() {
     setPromoToggler(true);
   }, []);
 
-  const isMobile = window.innerWidth <= 768; // Adjust the width based on your mobile breakpoint
+  const isMobile = window.innerWidth <= 768;
 
   return (
     <>

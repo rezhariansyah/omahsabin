@@ -1,5 +1,5 @@
 // pages/app/dashboard.js
-import About from "@/components/About/About";
+import About from "@/components/About";
 import Content2 from "@/components/Content2/Content2";
 import Content3 from "@/components/Content3/Content3";
 import Layout from "@/components/Layout";

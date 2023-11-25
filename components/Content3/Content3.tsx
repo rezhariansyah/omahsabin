@@ -8,7 +8,6 @@ import iconRice from "../../public/assets/images/iconRice.png";
 import iconFire from "../../public/assets/images/iconFire.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useSpring, animated } from "react-spring";
 
 interface Icon {
   src: StaticImageData;
