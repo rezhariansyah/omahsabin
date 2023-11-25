@@ -1,11 +1,16 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import PromoBannerContent from "../../public/assets/images/PromoBannerContent.png";
 import PromoBannerContentMobile from "@/public/assets/images/PromoBannerContentMobile.png";
 import Link from "next/link";
 export default function PromoBanner() {
-  const isMobile = window.innerWidth <= 768;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+  }, []);
+
   return (
     <div className="mt-10">
       <Link

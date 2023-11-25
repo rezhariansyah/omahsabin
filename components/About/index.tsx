@@ -16,11 +16,12 @@ export default function About() {
   const [thirdToggler, setThirdToggler] = useState(false);
   const [promoToggler, setPromoToggler] = useState(false);
 
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     setPromoToggler(true);
+    setIsMobile(window.innerWidth <= 768);
   }, []);
-
-  const isMobile = window.innerWidth <= 768;
 
   return (
     <>
@@ -130,7 +131,6 @@ export default function About() {
                     X
                   </button>
 
-                  {/* Your image content */}
                   <div className="sm:flex sm:items-start">
                     <Link
                       href="https://book-directonline.com/properties/omahsabinvilladirect?locale=en&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=IDR&checkInDate=2023-11-25&checkOutDate=2023-11-28"

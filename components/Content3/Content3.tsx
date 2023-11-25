@@ -143,7 +143,6 @@ const Content3: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [bigBannerIndex, setBigBannerIndex] = useState(0);
   const [isActive, setIsActive] = useState(false);
-  console.log("isActive", isActive);
 
   const prevBigSlide = () => {
     const isFirstSlide = bigBannerIndex === 0;
