@@ -13,7 +13,7 @@ export default function Content2() {
         <h3 className="text-3xl font-normal font-jakarta mb-4">
           The Charm Of Pererenan
         </h3>
-        <p className="text-blackBlur font-satoshi leading-5 mb-4 text-sm font-light">
+        <p className="text-blackBlur font-satoshi leading-6 mb-6 md:leading-7 md:w-11/12	 text-base	md:text-xl font-light">
           A serene seaside village, 45 mins from the airport, blending green
           fields and surf breaks. Relaxed Balinese vibe, close to trendy Canggu.
         </p>
