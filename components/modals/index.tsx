@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
-import ModalVideo from "react-modal-video";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import "react-modal-video/css/modal-video.min.css";
+import ModalVideo from "react-modal-video";
 
 interface ModalsProps {
   image: StaticImageData;
@@ -15,6 +15,12 @@ const Modals: React.FC<ModalsProps> = ({ image, alt }) => {
   const [isOpen, setOpen] = useState(false);
   const openModal = () => {
     setOpen(true);
+    document.body.style.overflow = "hidden"; // Disable scrolling when the modal is open
+  };
+
+  const closeModal = () => {
+    setOpen(false);
+    document.body.style.overflow = "auto"; // Enable scrolling when the modal is closed
   };
   return (
     <>
@@ -28,18 +34,22 @@ const Modals: React.FC<ModalsProps> = ({ image, alt }) => {
             <FontAwesomeIcon
               icon={faCirclePlay}
               className=" text-3xl md:opacity-0 md:group-hover:opacity-80 md:transition-opacity duration-300"
-              style={{ color: "white" }} // Sesuaikan warna di sini
+              style={{ color: "white" }}
             />
           </div>
         </button>
       </div>
 
-      <ModalVideo
-        channel="youtube"
-        isOpen={isOpen}
-        videoId="BFS9n4B_2xA"
-        onClose={() => setOpen(false)}
-      />
+      {isOpen && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 z-50 flex items-center justify-center">
+          <ModalVideo
+            channel="youtube"
+            isOpen={isOpen}
+            videoId="BFS9n4B_2xA"
+            onClose={closeModal}
+          />
+        </div>
+      )}
     </>
   );
 };
