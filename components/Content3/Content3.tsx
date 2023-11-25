@@ -1,14 +1,14 @@
-'use client';
-import Image, { StaticImageData } from 'next/image';
-import React, { useState, useEffect } from 'react';
-import contentImage3 from '../../public/assets/images/westvilla.png';
-import contentImage2 from '../../public/assets/images/heroimage.png';
-import iconBed from '../../public/assets/images/iconBed.png';
-import iconRice from '../../public/assets/images/iconRice.png';
-import iconFire from '../../public/assets/images/iconFire.png';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { useSpring, animated } from 'react-spring';
+"use client";
+import Image, { StaticImageData } from "next/image";
+import React, { useState, useEffect } from "react";
+import contentImage3 from "../../public/assets/images/westvilla.png";
+import contentImage2 from "../../public/assets/images/heroimage.png";
+import iconBed from "../../public/assets/images/iconBed.png";
+import iconRice from "../../public/assets/images/iconRice.png";
+import iconFire from "../../public/assets/images/iconFire.png";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { useSpring, animated } from "react-spring";
 
 interface Icon {
   src: StaticImageData;
@@ -33,109 +33,109 @@ interface VillaData {
 const Content3: React.FC = () => {
   const data: VillaData[] = [
     {
-      title: 'WEST VILLA',
-      name: 'Omah Sabin West Villa',
+      title: "WEST VILLA",
+      name: "Omah Sabin West Villa",
       desc: "A charming haven featuring a 10m infinity pool, sun deck, and three deluxe bedrooms with Bali's renowned...",
       icons: [
         {
           src: iconBed,
-          alt: 'Icon Bed',
-          title: '3 Bedrooms',
-          description: 'Ideal for a group of 6 adults',
+          alt: "Icon Bed",
+          title: "3 Bedrooms",
+          description: "Ideal for a group of 6 adults",
         },
         {
           src: iconRice,
-          alt: 'Icon Bed',
-          title: 'Rice Field View Pool',
-          description: 'Private pool and rice field as your backyard',
+          alt: "Icon Bed",
+          title: "Rice Field View Pool",
+          description: "Private pool and rice field as your backyard",
         },
         {
           src: iconFire,
-          alt: 'Icon Bed',
-          title: 'Complete Kitchen & Dining Setup',
-          description: 'Perfect for a small gathering with your loved ones',
+          alt: "Icon Bed",
+          title: "Complete Kitchen & Dining Setup",
+          description: "Perfect for a small gathering with your loved ones",
         },
       ],
       images: [
         {
           url: contentImage3,
-          text: 'Omah Sabin East Villa',
+          text: "Omah Sabin East Villa",
         },
         {
           url: contentImage2,
-          text: 'Omah Sabin West Villa',
+          text: "Omah Sabin West Villa",
         },
       ],
     },
     {
-      title: 'ANOTHER VILLA',
-      name: 'Another Villa Name',
-      desc: 'Another description...',
+      title: "ANOTHER VILLA",
+      name: "Another Villa Name",
+      desc: "Another description...",
       icons: [
         {
           src: iconBed,
-          alt: 'Icon Bed',
-          title: 'Another Bedrooms',
-          description: 'Ideal for another group',
+          alt: "Icon Bed",
+          title: "Another Bedrooms",
+          description: "Ideal for another group",
         },
         {
           src: iconRice,
-          alt: 'Icon Bed',
-          title: 'Another Rice Field View Pool',
-          description: 'Private pool and rice field as another backyard',
+          alt: "Icon Bed",
+          title: "Another Rice Field View Pool",
+          description: "Private pool and rice field as another backyard",
         },
         {
           src: iconFire,
-          alt: 'Icon Bed',
-          title: 'Another Kitchen & Dining Setup',
+          alt: "Icon Bed",
+          title: "Another Kitchen & Dining Setup",
           description:
-            'Perfect for another small gathering with your loved ones',
+            "Perfect for another small gathering with your loved ones",
         },
       ],
       images: [
         {
           url: contentImage3,
-          text: 'Omah Sabin timur Villa',
+          text: "Omah Sabin timur Villa",
         },
         {
           url: contentImage2,
-          text: 'Omah Sabin barat Villa',
+          text: "Omah Sabin barat Villa",
         },
       ],
     },
     {
-      title: 'ANOTHER VILLA 2',
-      name: 'Another Villa Name 2',
-      desc: 'Another description...',
+      title: "ANOTHER VILLA 2",
+      name: "Another Villa Name 2",
+      desc: "Another description...",
       icons: [
         {
           src: iconBed,
-          alt: 'Icon Bed',
-          title: 'Another Bedrooms',
-          description: 'Ideal for another group',
+          alt: "Icon Bed",
+          title: "Another Bedrooms",
+          description: "Ideal for another group",
         },
         {
           src: iconRice,
-          alt: 'Icon Bed',
-          title: 'Another Rice Field View Pool',
-          description: 'Private pool and rice field as another backyard',
+          alt: "Icon Bed",
+          title: "Another Rice Field View Pool",
+          description: "Private pool and rice field as another backyard",
         },
         {
           src: iconFire,
-          alt: 'Icon Bed',
-          title: 'Another Kitchen & Dining Setup',
+          alt: "Icon Bed",
+          title: "Another Kitchen & Dining Setup",
           description:
-            'Perfect for another small gathering with your loved ones',
+            "Perfect for another small gathering with your loved ones",
         },
       ],
       images: [
         {
           url: contentImage3,
-          text: 'Omah Sabin East Villa',
+          text: "Omah Sabin East Villa",
         },
         {
           url: contentImage2,
-          text: 'Omah Sabin West Villa',
+          text: "Omah Sabin West Villa",
         },
       ],
     },
@@ -144,7 +144,7 @@ const Content3: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [bigBannerIndex, setBigBannerIndex] = useState(0);
   const [isActive, setIsActive] = useState(false);
-  console.log('isActive', isActive);
+  console.log("isActive", isActive);
 
   const prevBigSlide = () => {
     const isFirstSlide = bigBannerIndex === 0;
@@ -197,7 +197,7 @@ const Content3: React.FC = () => {
       <div className="flex items-center justify-between max-h-fit	 mt-24">
         <div className="flex items-center gap-3">
           <div className="w-6 h-6 bg-black/50 text-blackBlur cursor-pointer border border-blackBlur rounded-full flex items-center justify-center">
-            <span onClick={prevBigSlide}>{'<-'}</span>
+            <span onClick={prevBigSlide}>{"<-"}</span>
           </div>
           <span
             onClick={prevBigSlide}
@@ -214,7 +214,7 @@ const Content3: React.FC = () => {
             {data[(bigBannerIndex + 1) % data.length].name}
           </span>
           <div className="w-6 h-6 bg-black/50 text-blackBlur cursor-pointer border border-blackBlur rounded-full flex items-center justify-center">
-            <span onClick={nextBigSlide}>{'->'}</span>
+            <span onClick={nextBigSlide}>{"->"}</span>
           </div>
         </div>
       </div>
@@ -234,7 +234,7 @@ const Content3: React.FC = () => {
                     alt="slide-banner"
                     fill
                     className={`absolute w-full h-full bg-center bg-cover transition-opacity duration-1000 object-cover ${
-                      index === currentIndex ? 'opacity-100' : 'opacity-0'
+                      index === currentIndex ? "opacity-100" : "opacity-0"
                     }`}
                   />
                 ))}
@@ -242,16 +242,16 @@ const Content3: React.FC = () => {
                   <div
                     key={index}
                     className={`absolute bottom-4 w-full max-w-screen-md flex justify-between items-center pr-7 ${
-                      index === currentIndex ? 'opacity-100' : 'opacity-0'
+                      index === currentIndex ? "opacity-100" : "opacity-0"
                     }`}
                   >
                     <div className="text-white">{slide.text}</div>
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 bg-black text-white cursor-pointer border border-white rounded-full flex items-center justify-center">
-                        <span onClick={prevSlide}>{'<-'}</span>
+                        <span onClick={prevSlide}>{"<-"}</span>
                       </div>
                       <div className="w-10 h-10 bg-black/50 text-white cursor-pointer border border-white rounded-full flex items-center justify-center">
-                        <span onClick={nextSlide}>{'->'}</span>
+                        <span onClick={nextSlide}>{"->"}</span>
                       </div>
                     </div>
                   </div>
