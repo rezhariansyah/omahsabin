@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import banner1 from "../../public/assets/images/aboutimagebig.png";
 import banner2 from "../../public/assets/images/aboutimagesmall1.png";
 import iconRight from "../../public/assets/icons/ArrowUpRight.png";
@@ -29,11 +29,11 @@ function BannerHeader() {
     setCurrentIndex(newIndex);
   };
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
-  };
+  }, [currentIndex, setCurrentIndex, slides.length]);
 
   const goToSlide = (slideIndex: React.SetStateAction<number>) => {
     setCurrentIndex(slideIndex);
@@ -45,7 +45,7 @@ function BannerHeader() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [currentIndex, nextSlide]);
 
   return (
     <div className="hero-content lg:max-w-full flex-col lg:flex-row p-0 mt-5 mb-14">

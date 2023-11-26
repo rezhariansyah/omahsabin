@@ -1,6 +1,6 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import contentImage3 from "../../public/assets/images/westvilla.png";
 import contentImage2 from "../../public/assets/images/heroimage.png";
 import iconBed from "../../public/assets/images/iconBed.png";
@@ -172,11 +172,11 @@ const Content3: React.FC = () => {
     setCurrentIndex(newIndex);
   };
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     const isLastSlide = currentIndex === data[bigBannerIndex].images.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
-  };
+  }, [currentIndex, setCurrentIndex, data, bigBannerIndex]);
 
   const goToSlide = (slideIndex: React.SetStateAction<number>) => {
     setCurrentIndex(slideIndex);
@@ -188,7 +188,7 @@ const Content3: React.FC = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [currentIndex, nextSlide]);
 
   return (
     <>
