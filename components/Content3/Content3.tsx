@@ -1,6 +1,6 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import contentImage3 from "../../public/assets/images/westvilla.png";
 import contentImage2 from "../../public/assets/images/heroimage.png";
 import iconBed from "../../public/assets/images/iconBed.png";
@@ -30,115 +30,118 @@ interface VillaData {
 }
 
 const Content3: React.FC = () => {
-  const data: VillaData[] = [
-    {
-      title: "WEST VILLA",
-      name: "Omah Sabin West Villa",
-      desc: "A charming haven featuring a 10m infinity pool, sun deck, and three deluxe bedrooms with Bali's renowned...",
-      icons: [
-        {
-          src: iconBed,
-          alt: "Icon Bed",
-          title: "3 Bedrooms",
-          description: "Ideal for a group of 6 adults",
-        },
-        {
-          src: iconRice,
-          alt: "Icon Bed",
-          title: "Rice Field View Pool",
-          description: "Private pool and rice field as your backyard",
-        },
-        {
-          src: iconFire,
-          alt: "Icon Bed",
-          title: "Complete Kitchen & Dining Setup",
-          description: "Perfect for a small gathering with your loved ones",
-        },
-      ],
-      images: [
-        {
-          url: contentImage3,
-          text: "Omah Sabin East Villa",
-        },
-        {
-          url: contentImage2,
-          text: "Omah Sabin West Villa",
-        },
-      ],
-    },
-    {
-      title: "ANOTHER VILLA",
-      name: "Another Villa Name",
-      desc: "Another description...",
-      icons: [
-        {
-          src: iconBed,
-          alt: "Icon Bed",
-          title: "Another Bedrooms",
-          description: "Ideal for another group",
-        },
-        {
-          src: iconRice,
-          alt: "Icon Bed",
-          title: "Another Rice Field View Pool",
-          description: "Private pool and rice field as another backyard",
-        },
-        {
-          src: iconFire,
-          alt: "Icon Bed",
-          title: "Another Kitchen & Dining Setup",
-          description:
-            "Perfect for another small gathering with your loved ones",
-        },
-      ],
-      images: [
-        {
-          url: contentImage3,
-          text: "Omah Sabin timur Villa",
-        },
-        {
-          url: contentImage2,
-          text: "Omah Sabin barat Villa",
-        },
-      ],
-    },
-    {
-      title: "ANOTHER VILLA 2",
-      name: "Another Villa Name 2",
-      desc: "Another description...",
-      icons: [
-        {
-          src: iconBed,
-          alt: "Icon Bed",
-          title: "Another Bedrooms",
-          description: "Ideal for another group",
-        },
-        {
-          src: iconRice,
-          alt: "Icon Bed",
-          title: "Another Rice Field View Pool",
-          description: "Private pool and rice field as another backyard",
-        },
-        {
-          src: iconFire,
-          alt: "Icon Bed",
-          title: "Another Kitchen & Dining Setup",
-          description:
-            "Perfect for another small gathering with your loved ones",
-        },
-      ],
-      images: [
-        {
-          url: contentImage3,
-          text: "Omah Sabin East Villa",
-        },
-        {
-          url: contentImage2,
-          text: "Omah Sabin West Villa",
-        },
-      ],
-    },
-  ];
+  const data: VillaData[] = useMemo(
+    () => [
+      {
+        title: "WEST VILLA",
+        name: "Omah Sabin West Villa",
+        desc: "A charming haven featuring a 10m infinity pool, sun deck, and three deluxe bedrooms with Bali's renowned...",
+        icons: [
+          {
+            src: iconBed,
+            alt: "Icon Bed",
+            title: "3 Bedrooms",
+            description: "Ideal for a group of 6 adults",
+          },
+          {
+            src: iconRice,
+            alt: "Icon Bed",
+            title: "Rice Field View Pool",
+            description: "Private pool and rice field as your backyard",
+          },
+          {
+            src: iconFire,
+            alt: "Icon Bed",
+            title: "Complete Kitchen & Dining Setup",
+            description: "Perfect for a small gathering with your loved ones",
+          },
+        ],
+        images: [
+          {
+            url: contentImage3,
+            text: "Omah Sabin East Villa",
+          },
+          {
+            url: contentImage2,
+            text: "Omah Sabin West Villa",
+          },
+        ],
+      },
+      {
+        title: "ANOTHER VILLA",
+        name: "Another Villa Name",
+        desc: "Another description...",
+        icons: [
+          {
+            src: iconBed,
+            alt: "Icon Bed",
+            title: "Another Bedrooms",
+            description: "Ideal for another group",
+          },
+          {
+            src: iconRice,
+            alt: "Icon Bed",
+            title: "Another Rice Field View Pool",
+            description: "Private pool and rice field as another backyard",
+          },
+          {
+            src: iconFire,
+            alt: "Icon Bed",
+            title: "Another Kitchen & Dining Setup",
+            description:
+              "Perfect for another small gathering with your loved ones",
+          },
+        ],
+        images: [
+          {
+            url: contentImage3,
+            text: "Omah Sabin timur Villa",
+          },
+          {
+            url: contentImage2,
+            text: "Omah Sabin barat Villa",
+          },
+        ],
+      },
+      {
+        title: "ANOTHER VILLA 2",
+        name: "Another Villa Name 2",
+        desc: "Another description...",
+        icons: [
+          {
+            src: iconBed,
+            alt: "Icon Bed",
+            title: "Another Bedrooms",
+            description: "Ideal for another group",
+          },
+          {
+            src: iconRice,
+            alt: "Icon Bed",
+            title: "Another Rice Field View Pool",
+            description: "Private pool and rice field as another backyard",
+          },
+          {
+            src: iconFire,
+            alt: "Icon Bed",
+            title: "Another Kitchen & Dining Setup",
+            description:
+              "Perfect for another small gathering with your loved ones",
+          },
+        ],
+        images: [
+          {
+            url: contentImage3,
+            text: "Omah Sabin East Villa",
+          },
+          {
+            url: contentImage2,
+            text: "Omah Sabin West Villa",
+          },
+        ],
+      },
+    ],
+    []
+  );
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [bigBannerIndex, setBigBannerIndex] = useState(0);
