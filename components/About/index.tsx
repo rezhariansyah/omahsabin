@@ -35,8 +35,9 @@ export default function About() {
         <div className="content-2-wrapper ">
           <p className="text-blackBlur font-satoshi md:leading-7 text-base md:text-xl  mb-4 font-light	font-xl">
             A complex of private boutique villas in the heart of Pererenan with
-            uninterrupted rice field view <br /> and private pools. Omah Sabin
-            offers a personalized design and service in a peacefulne... <br />
+            uninterrupted rice field view <br className="hidden md:block" /> and
+            private pools. Omah Sabin offers a personalized design and service
+            in a peacefulne... <br />
           </p>
           <span className="text-blackBlur mt-48 font-normal md:text-xl underline">
             read more
