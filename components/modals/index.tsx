@@ -1,8 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import "react-modal-video/css/modal-video.min.css";
 import ModalVideo from "react-modal-video";
 import { FaRegCirclePlay } from "react-icons/fa6";
